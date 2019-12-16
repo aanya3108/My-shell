@@ -1,0 +1,65 @@
+﻿	Assignment 0- Part 2
+
+RUNNING THE SHELL
+
+Run "make"
+Execute by using "./a.out"
+Type "exit" to exit the shell
+
+
+Internal commands  : ‘cd’, ‘echo’, ‘history’, ‘pwd’ and ‘exit’.
+
+      Cd
+
+    • "cd .." - goes to previous directory
+    • "cd ~" goes to ~/
+      It shows the path before and after the changes.
+      
+      Echo
+
+    • "echo" - prints empty line
+    • echo text - prints "text"
+    • echo -E "text"  - prints "text" without spacing
+      
+      Pwd
+    • prints present working directory(or the path)
+	
+	History
+    • prints the history of commands that we used
+      
+External commands : ‘ls’, ‘cat’, ‘date’, ‘rm’ and ‘mkdir’
+
+      ls
+
+    • ls- prints all the files in the directory
+
+    • ls -l : prints all the files in list form
+      
+
+      cat “filename”
+
+    • prints content of the file
+
+      
+      date 
+
+    • date : prints current date
+
+    • date -u : prints date in UTC format
+      
+
+      rm “1”
+      
+    •  remove file named 1
+      
+
+      mkdir filename
+      
+    • makes file with name filename
+
+
+
+To handle these commands, the shell starts a new process, using fork and then execute the command using family of execl commands. It then waits for the child process to complete, using the waitpid function.
+
+
+
